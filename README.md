@@ -14,7 +14,7 @@
 <p align="center">
   <img src="https://img.shields.io/badge/platform-macOS%20%7C%20Windows-000000?style=flat-square" alt="Platform"/>
   <img src="https://img.shields.io/badge/swift-5.9%2B-F5A623?style=flat-square" alt="Swift"/>
-  <img src="https://img.shields.io/github/license/aryanfulari/Anypaste?style=flat-square" alt="MIT License"/>
+  <img src="https://img.shields.io/badge/license-MIT-green?style=flat-square" alt="MIT License"/>
   <img src="https://img.shields.io/github/stars/aryanfulari/Anypaste?style=flat-square" alt="Stars"/>
   <img src="https://badgen.net/github/release/aryanfulari/Anypaste" alt="Release"/>
   <img src="https://img.shields.io/github/downloads/aryanfulari/Anypaste/total?style=flat-square" alt="Downloads"/>
