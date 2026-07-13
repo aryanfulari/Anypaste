@@ -56,8 +56,8 @@ Built  with Swift and AppKit.
 
 ## Contributors
 A massive thank you to the contributors who helped build and shape Anypaste:
-* **Meghana Agnur**
-* **Ruchira Jagshettiwar**
+* **Meghana Agnur** : https://github.com/meghanaagnur
+* **Ruchira Jagshettiwar** : https://github.com/ruchirajags
 
 
 ## Contributing
