@@ -2,13 +2,24 @@
   <img src="assets/logo.jpeg" alt="Anypaste logo">
 </div>
 
-# Anypaste 
+<h1 align="center">Anypaste</h1>
 
-Anypaste is a frictionless macOS menu bar utility that allows you to instantly capture text and screenshots ***from anywhere on the screen*** and append them directly to your active Markdown files without interrupting your workflow. 
 
-No more manually copying, pasting and constant switching between files.
+<p align="center"><em> Anypaste is a frictionless macOS menu bar utility that allows you to instantly capture text and screenshots from anywhere on the screen and append them directly to your active Markdown files without interrupting your workflow. </em></p>
 
-Built  with Swift and AppKit.
+<p align="center"><em> No more manually copying, pasting and constant switching between files.</em></p>
+
+<p align="center"><em> Built  with Swift and AppKit.</em></p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/platform-macOS%20%7C%20Windows-000000?style=flat-square" alt="Platform"/>
+  <img src="https://img.shields.io/badge/swift-5.9%2B-F5A623?style=flat-square" alt="Swift"/>
+  <img src="https://badgen.net/github/license/aryanfulari/Anypaste" alt="License"/>
+  <img src="https://img.shields.io/github/stars/aryanfulari/Anypaste?style=flat-square" alt="Stars"/>
+  <img src="https://badgen.net/github/release/aryanfulari/Anypaste" alt="Release"/>
+  <img src="https://img.shields.io/github/downloads/aryanfulari/Anypaste/total?style=flat-square" alt="Downloads"/>
+  <img src="https://komarev.com/ghpvc/?username=aryanfulari&repo=Anypaste&color=green&label=views" alt="Views"/>
+</p>
 
 <div align="center">
   <img src="assets/textinstruction.png" alt="Pasting text" width="49%">
@@ -39,6 +50,7 @@ Built  with Swift and AppKit.
 </div>
 
 ---
+# Give the repo a ⭐️ so you don't miss future updates.
 
 ## Installation steps
 1. Clone this repository and open `Anypaste.xcodeproj` in Xcode.
