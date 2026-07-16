@@ -42,6 +42,7 @@
   * **New file** &rarr; Create a new file anywhere and start!
   * **Choose file** &rarr; Choose any markdown file of your choice, any file!
   * **Recent files** &rarr; Shows the last 3 edited files for quick access.
+  * **Quickly open the current file being appended by pressing command + option + O**
 ---
   * **Demonstration**:
 
