@@ -56,7 +56,7 @@
 ---
   * **Demonstration**:
 
-    note: full screen screenshot not shown in this demo since it was added in a later version
+    note: full screen screenshot is not shown in this demo since it was added in a later version
 
 <div align="center">
   <img src="assets/output.gif" alt="Working">
