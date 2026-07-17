@@ -31,7 +31,7 @@
 </div>
 
 ## Features
-* ***Menu Bar Agent***: Runs quietly in the background without cluttering your Dock. Easy access from the menu bar (look up :).
+* ***Menu Bar Agent***: Runs quietly in the background without cluttering your Dock. Easy access from the menu bar (look up :)
 * ***Quick Capture***: Easy commands, and everything seamlessly appends to your designated file.
 
   Press:
@@ -40,6 +40,7 @@
   3.  `(⌥ + shift + /)` to grab a full screen screenshot
 * ***Pixel-Perfect:*** Anypaste doesn't mess with your image dimensions. The image size in your Markdown file maps exactly to your screen capture, pixel by pixel, preserving original fidelity without unwanted scaling.
 * ***Native macOS Aesthetics***: Features a custom-designed metallic icon and smooth crossfade animations.
+* **Quickly open the current file being appended by pressing (⌘ + ⌥  + O)**
 * ***Zero Friction***: Built for students, researchers, developers, and writers who need to learn and collect data at the speed of thought.
 * ***Lightweight Footprint*** : Built natively with Swift and AppKit, Anypaste consumes minimal CPU and memory, ensuring your Mac's battery life and performance remain entirely unaffected.
 * **Dropdown Menu Options**: 
@@ -51,7 +52,7 @@
   * **New file** &rarr; Create a new file anywhere and start!
   * **Choose file** &rarr; Choose any markdown file of your choice, any file!
   * **Recent files** &rarr; Shows the last 3 edited files for quick access.
-  * **Quickly open the current file being appended by pressing command + option + O**
+
 ---
   * **Demonstration**:
 
