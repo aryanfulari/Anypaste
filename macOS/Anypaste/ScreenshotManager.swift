@@ -1,23 +1,20 @@
 import AppKit
 
-/// Watches for Cmd+. and, when pressed, runs macOS's own interactive screenshot
+/// Watches for option +. and, when pressed, runs macOS's own interactive screenshot
 /// tool so you can drag out a custom area, then appends the result to the destination file.
 final class ScreenshotManager {
 
     private var monitor: Any?
 
-    // Virtual keycode 47 is the physical position of the "." key on a standard layout.
-    private let periodKeyCode: UInt16 = 47
+    
+    // Virtual keycode 44 is the physical position of the "/" key on a standard layout.
+    private let slashKeyCode: UInt16 = 44
 
     func start() {
         monitor = NSEvent.addGlobalMonitorForEvents(matching: [.keyDown]) { [weak self] event in
-            guard let self, event.keyCode == self.periodKeyCode else { return }
-            
-            // Check that ONLY the Command key is held down (ignoring Caps Lock, etc.)
-            let flags = event.modifierFlags.intersection(.deviceIndependentFlagsMask)
-            if flags == .command {
-                self.captureArea()
-            }
+            guard let self, event.keyCode == self.slashKeyCode,
+                  event.modifierFlags.contains(.option) else { return }
+            self.captureArea()
         }
     }
 
