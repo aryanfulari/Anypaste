@@ -30,7 +30,7 @@
 * ***Menu Bar Agent***: Runs quietly in the background without cluttering your Dock. Easy access from the menu bar (look up :).
 * ***Quick Capture***: press `function` and highlight text to append text to your choice of file, and `(⌥ + /)` keys to grab a screenshot, and it seamlessly appends to your designated file. 
 * ***Pixel-Perfect:*** Anypaste doesn't mess with your image dimensions. The image size in your Markdown file maps exactly to your screen capture, pixel by pixel, preserving original fidelity without unwanted scaling.
-* ***Native macOS Aesthetics***: Features a custom-designed metallic icon and silky-smooth `CATransition` crossfade animations. 
+* ***Native macOS Aesthetics***: Features a custom-designed metallic icon and smooth crossfade animations.
 * ***Zero Friction***: Built for students, researchers, developers, and writers who need to learn and collect data at the speed of thought.
 * ***Lightweight Footprint*** : Built natively with Swift and AppKit, Anypaste consumes minimal CPU and memory, ensuring your Mac's battery life and performance remain entirely unaffected.
 * **Dropdown Menu Options**: 
