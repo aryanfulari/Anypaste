@@ -26,9 +26,18 @@
   <img src="assets/screenshotinstruction.png" alt="Pasting screenshots" width="49%">
 </div>
 
+<div align="center">
+  <img src="assets/fullscreenscreenshotinstruction.png" alt="Pasting screenshots" width="49%">
+</div>
+
 ## Features
 * ***Menu Bar Agent***: Runs quietly in the background without cluttering your Dock. Easy access from the menu bar (look up :).
-* ***Quick Capture***: press `function` and highlight text to append text to your choice of file, and `(⌥ + /)` keys to grab a screenshot, and it seamlessly appends to your designated file. 
+* ***Quick Capture***: Easy commands, and everything seamlessly appends to your designated file.
+
+  Press:
+  1. `function` and highlight text to append text to your choice of file
+  2. `(⌥ + /)` keys to grab a screenshot of custom size
+  3.  `(⌥ + shift + /)` to grab a full screen screenshot
 * ***Pixel-Perfect:*** Anypaste doesn't mess with your image dimensions. The image size in your Markdown file maps exactly to your screen capture, pixel by pixel, preserving original fidelity without unwanted scaling.
 * ***Native macOS Aesthetics***: Features a custom-designed metallic icon and smooth crossfade animations.
 * ***Zero Friction***: Built for students, researchers, developers, and writers who need to learn and collect data at the speed of thought.
@@ -45,6 +54,8 @@
   * **Quickly open the current file being appended by pressing command + option + O**
 ---
   * **Demonstration**:
+
+    note: full screen screenshot not shown in this demo since it was added in a later version
 
 <div align="center">
   <img src="assets/output.gif" alt="Working">

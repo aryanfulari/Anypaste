@@ -92,9 +92,8 @@ final class DestinationFileManager {
         appendRaw(text.trimmingCharacters(in: .whitespacesAndNewlines) + "\n\n")
     }
 
-    /// Saves screenshot data next to the destination file and appends an HTML image link
-    /// to strictly maintain the original on-screen dimensions.
-    func appendImage(_ imageData: Data) {
+    /// Saves screenshot data next to the destination file and appends a centered HTML image link.
+    func appendImage(_ imageData: Data, isFullScreen: Bool) {
         guard let fileURL = currentFileURL else { return }
 
         let assetsFolder = fileURL.deletingLastPathComponent().appendingPathComponent("AnypasteAssets")
@@ -108,17 +107,15 @@ final class DestinationFileManager {
         do {
             try imageData.write(to: imageURL)
             
-            // Extract the true dimensions of the screenshot
-            if let image = NSImage(data: imageData) {
-                let explicitWidth = Int(image.size.width)
+            // Define the HTML image tag based on the capture type
+            let imgTag = isFullScreen
+                ? "<img src=\"AnypasteAssets/\(imageName)\" width=\"900\">"
+                : "<img src=\"AnypasteAssets/\(imageName)\">"
                 
-                // Inject an HTML tag with the explicit width instead of the standard ![]() syntax
-                appendRaw("<img src=\"AnypasteAssets/\(imageName)\" width=\"\(explicitWidth)\">\n\n")
-            } else {
-                // Fallback just in case NSImage fails to initialize
-                appendRaw("![](AnypasteAssets/\(imageName))\n\n")
-            }
+            // Wrap the image in a centered paragraph tag
+            let formattedOutput = "<p align=\"center\">\n  \(imgTag)\n</p>\n\n"
             
+            appendRaw(formattedOutput)
         } catch {
             NSLog("Anypaste: failed to save screenshot – \(error)")
         }

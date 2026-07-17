@@ -12,39 +12,47 @@ final class ScreenshotManager {
 
     func start() {
         monitor = NSEvent.addGlobalMonitorForEvents(matching: [.keyDown]) { [weak self] event in
+            // Check if our base keys (Option + /) are pressed
             guard let self, event.keyCode == self.slashKeyCode,
                   event.modifierFlags.contains(.option) else { return }
-            self.captureArea()
+            
+            // If Shift is ALSO held, trigger a full-screen capture
+            if event.modifierFlags.contains(.shift) {
+                self.captureFullScreen()
+            } else {
+                self.captureArea()
+            }
         }
-    }
-
-    func stop() {
-        if let monitor {
-            NSEvent.removeMonitor(monitor)
-        }
-        monitor = nil
     }
 
     private func captureArea() {
+        // -i opens the interactive selection tool
+        performCapture(arguments: ["-i", "-c"], isFullScreen: false)
+    }
+
+    private func captureFullScreen() {
+        // Running screencapture without -i instantly captures the whole screen
+        performCapture(arguments: ["-c"], isFullScreen: true)
+    }
+
+    private func performCapture(arguments: [String], isFullScreen: Bool) {
         let pasteboard = NSPasteboard.general
         let previousChangeCount = pasteboard.changeCount
 
-        // screencapture -i blocks until the user finishes dragging a selection
-        // -c sends the result straight to the clipboard
         DispatchQueue.global(qos: .userInitiated).async {
             let task = Process()
             task.executableURL = URL(fileURLWithPath: "/usr/sbin/screencapture")
-            task.arguments = ["-i", "-c"]
+            task.arguments = arguments
             try? task.run()
             task.waitUntilExit()
 
             DispatchQueue.main.async {
                 guard pasteboard.changeCount != previousChangeCount,
                       let imageData = self.pngData(from: pasteboard) else {
-                    // User pressed Esc to cancel — nothing landed on the clipboard.
-                    return
+                    return // User cancelled or capture failed
                 }
-                DestinationFileManager.shared.appendImage(imageData)
+                // Pass the image data and the flag to the updated DestinationFileManager
+                DestinationFileManager.shared.appendImage(imageData, isFullScreen: isFullScreen)
             }
         }
     }
